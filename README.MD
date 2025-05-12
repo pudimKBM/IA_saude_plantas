@@ -2,6 +2,10 @@
 
 Este projeto utiliza um ESP32-CAM para capturar imagens de plantas, processá-las usando Inteligência Artificial (simulada) para classificar sua saúde/qualidade, e exibir os resultados em um dashboard. O processamento de IA pode ocorrer localmente no ESP32-CAM (modelo leve) ou remotamente em um servidor (modelo mais robusto).
 
+
+## Pesquisa e Documentação Adicional
+*   [Projeto Detalhado ESP32+Horta (PDF)](Pesquisa/Projeto%20Esp32+Horta.pdf)
+
 ## Funcionalidades Principais
 
 *   **Captura de Imagem:** O ESP32-CAM captura imagens de plantas em intervalos configuráveis.
