@@ -18,19 +18,20 @@ Este projeto utiliza um ESP32-CAM para capturar imagens de plantas, processá-la
 
 ```mermaid
 graph TD
-    A[Planta na Horta] --&gt; B(ESP32-CAM Captura Imagem);
-    B --&gt; C{Processamento?};
-    C -- Local --&gt; D[ESP32: Modelo IA Leve];
-    D --&gt; E[Classificação];
-    C -- Remoto --&gt; F[Envio Imagem via Wi-Fi];
-    F --&gt; G[Servidor: Modelo IA Robusto];
-    G --&gt; H[Classificação];
-    E --&gt; I[Resultado da Classificação];
-    H --&gt; I;
-    I --&gt; J[Armazenamento Resultado Local/Nuvem];
-    J --&gt; K{Visualização/Alerta};
-    K -- App/Dashboard --&gt; L[Usuário];
-    K -- Alerta --&gt; L;
+    A[Planta na Horta] --> B(ESP32-CAM Captura Imagem);
+    B --> C{Processamento?};
+    C -- Local --> D;
+    C -- Remoto --> E[Envio Imagem via Wi-Fi];
+    E --> F;
+    D --> G(Execução Modelo IA - Leve);
+    F --> H(Execução Modelo IA - Robusto);
+    G --> I;
+    H --> I;
+    I --> J(Armazenamento Resultado);
+    J --> K{Visualização};
+    K -- App/Dashboard --> L[Usuário];
+    K -- Alerta --> L;
+
 ```
 
 **Componentes Detalhados:**
